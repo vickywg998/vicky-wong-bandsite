@@ -1,0 +1,33 @@
+/*background image*/
+
+.bg_container {
+ 
+  display: flex;
+justify-content:center;
+  align-items: center;
+
+
+}
+
+.about_image {
+  background-image: url("../Images/artist.jpg");
+  
+   width:85%;
+   height: 450px;
+   justify-self: center;
+   display: flex;
+   background-size: cover;
+   background-position: center;
+
+  
+  }
+
+.hero_image {
+ 
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 670px;
+  background: url("../Images/marblebg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../Images/marblebg.jpg");
+}

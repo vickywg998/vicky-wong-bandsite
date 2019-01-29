@@ -1,0 +1,34 @@
+/*desktop photo gallery*/
+.gallery_font {
+  padding-top: 48px;
+  padding-left: 180px;
+  padding-bottom: 48px;
+}
+
+.gallery_container {
+  background-color: #FAFAFA;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.galleryimgs-container {
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+
+img {
+  width: 344px;
+  height: 193px;
+}
+
+.gallery_img {
+  display: flex;
+  padding-right: 24px;
+  padding-bottom: 24px;
+}
+
+
