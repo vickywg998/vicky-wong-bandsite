@@ -17,7 +17,9 @@ table td {
   border-bottom: 1px solid #AFAFAF;
 }
 
-
+td:last-child {
+  padding-right: 0px;
+}
 
 
 th, td {

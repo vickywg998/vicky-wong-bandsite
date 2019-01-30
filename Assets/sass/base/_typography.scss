@@ -8,7 +8,10 @@
   font-size:60px;
   line-height: 68px;
 }
-
+@mixin h1-herofont2 {
+  font-size:60px;
+  line-height: 80px;
+}
 @mixin h1-font {
 font-size: 36px;
 line-height: 44px;
@@ -150,7 +153,17 @@ td:first-child {
   font-weight: bold;
 }
 
+.show_herotitle--small {
+  @include h1-font;
+  color: white;
+}
+.show_herotitle--big {
+  @include h1-herofont2;
+  color: white;
+}
+
 
 .show_title {
  @include h1-font;
+ 
 }

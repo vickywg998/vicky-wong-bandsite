@@ -110,6 +110,18 @@ td:first-child {
   font-weight: bold;
 }
 
+.show_herotitle--small {
+  font-size: 36px;
+  line-height: 44px;
+  color: white;
+}
+
+.show_herotitle--big {
+  font-size: 60px;
+  line-height: 80px;
+  color: white;
+}
+
 .show_title {
   font-size: 36px;
   line-height: 44px;
@@ -235,6 +247,37 @@ footer {
 
 .bg_container {
   width: 100%;
+}
+
+/* show header and title*/
+h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+.show_herotitle--big, .show_herotitle--small {
+  padding-left: 180px;
+  width: 50%;
+}
+
+.show_herotitle--small {
+  padding-top: 160px;
+  padding-bottom: 48px;
+}
+
+.hero_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: row wrap;
+      flex-wrap: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer_nav {
@@ -458,6 +501,10 @@ table td {
   border-bottom: 1px solid #AFAFAF;
 }
 
+td:last-child {
+  padding-right: 0px;
+}
+
 th, td {
   text-align: left;
   padding: 20px;
@@ -511,6 +558,10 @@ th, td {
   color: white;
   border-radius: 3px;
   background-color: #323232;
+}
+
+.button_position {
+  float: right;
 }
 
 .button_size {

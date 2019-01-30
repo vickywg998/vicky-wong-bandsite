@@ -11,6 +11,9 @@
 
 }
 
+.button_position {
+  float: right;
+}
 .button_size {
   width: 160px;
   height: 48px;
@@ -21,3 +24,4 @@
 .button:hover {
   background-color: grey;
 }
+

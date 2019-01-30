@@ -61,3 +61,29 @@ $full-width: 100%;
 .bg_container {
   width: $full-width;
 }
+
+
+/* show header and title*/
+
+h1 {
+  margin: 0;
+  display: inline-block;
+}
+.show_herotitle--big, .show_herotitle--small {
+  padding-left: $desktop-padding;
+  width: 50%;
+}
+
+.show_herotitle--small {
+  padding-top: 160px;
+  padding-bottom: 48px;
+}
+
+
+.hero_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content:center;
+  align-items: center;
+}
