@@ -30,6 +30,8 @@ line-height: 44px;
 @mixin h5-font {
   font-size: 12px;
   line-height: 20px;
+  color: #999999;
+  
 }
 
 $primary-font: 'Avenir Next';
@@ -129,3 +131,26 @@ font-weight: bold;
 
 
 
+/*bandsite 2 */
+
+th {
+  @include h5-font;
+  font-weight: normal;
+}
+
+td {
+  @include h4-font;
+}
+
+.button {
+  @include h3-font;
+
+}
+td:first-child {
+  font-weight: bold;
+}
+
+
+.show_title {
+ @include h1-font;
+}

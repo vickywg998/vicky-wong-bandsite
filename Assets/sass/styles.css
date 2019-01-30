@@ -88,6 +88,33 @@ body {
   color: white;
 }
 
+/*bandsite 2 */
+th {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+  font-weight: normal;
+}
+
+td {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.button {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+.show_title {
+  font-size: 36px;
+  line-height: 44px;
+}
+
 /*layout*/
 * {
   -webkit-box-sizing: border-box;
@@ -409,6 +436,33 @@ img {
   width: 45%;
 }
 
+/*bandsite 2*/
+.show_title {
+  padding-left: 180px;
+  padding-top: 48px;
+}
+
+.main_table {
+  width: 100%;
+}
+
+.table_position {
+  margin-left: 375px;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  border: none;
+  width: 76.6%;
+}
+
+table td {
+  border-bottom: 1px solid #AFAFAF;
+}
+
+th, td {
+  text-align: left;
+  padding: 20px;
+}
+
 /*components*/
 /*background image*/
 .bg_container {
@@ -443,6 +497,31 @@ img {
   background: url("../Images/marblebg.jpg");
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../Images/marblebg.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../Images/marblebg.jpg");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.button {
+  padding: 2px 4px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+  background-color: #323232;
+}
+
+.button_size {
+  width: 160px;
+  height: 48px;
+  border: 0;
+  margin: 0;
+}
+
+.button:hover {
+  background-color: grey;
 }
 
 /*media queries*/
