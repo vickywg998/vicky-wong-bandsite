@@ -51,11 +51,11 @@ img {
     padding-bottom: 56px;
 }
 .comment_section_container--small {
-  width:90%;
+  width:85%;
   height: 800px; //change later
   display: flex;
-flex-flow: row wrap;
-  align-items: flex-start;
+flex-flow: column wrap;
+  align-items: center;
   
   
 
@@ -73,8 +73,8 @@ form {
 
 }
 .form_style {
-  padding-right: 170px;
-  width: 90%;
+padding-left: 40px;
+  width: 85%;
   display: flex;
   flex-flow: column wrap;
  align-items: flex-end;
@@ -105,10 +105,29 @@ padding-top: 14px;
 }
 
 .singer_icon {
-  padding-left: 80px;
+width:10%;
 padding-top:25px;
 padding-right: 20px;
-
+align-self: flex-start;
 
 }
 
+.static_comments {
+  
+ 
+  display:flex;
+  flex-flow: column wrap;
+ 
+
+}
+
+.static_comment {
+  width: 63%;
+
+  border-bottom: 3px solid grey;
+}
+
+.comment_content {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
