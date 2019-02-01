@@ -167,3 +167,13 @@ td:first-child {
  @include h1-font;
  
 }
+
+
+/*tablet size bandsite 2*/
+.show_herotitle--small {
+  @include h2-font;
+}
+
+.show_herotitle--big {
+  @include h1-herofont2;
+}

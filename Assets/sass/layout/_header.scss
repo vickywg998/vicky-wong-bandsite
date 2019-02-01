@@ -6,6 +6,9 @@
   width: 100%;
   text-align: left;
   padding-left: 180px;
+  overflow: hidden;
+
+  
 }
 
 .header_logo {
@@ -80,10 +83,3 @@ h1 {
 }
 
 
-.hero_container {
-  width: 100%;
-  display: flex;
-  flex-wrap: row wrap;
-  justify-content:center;
-  align-items: center;
-}
