@@ -1,4 +1,8 @@
 /*desktop photo gallery*/
+
+* {
+  box-sizing: border-box;
+}
 .gallery_font {
   padding-top: 48px;
   padding-left: 180px;
@@ -31,4 +35,80 @@ img {
   padding-bottom: 24px;
 }
 
+/*comment section */
+
+.comment_container--big {
+  width: 100%;
+  padding-left:$desktop-padding; 
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; 
+  
+}
+
+.comment_font {
+  padding-top: 48px;
+    padding-bottom: 56px;
+}
+.comment_section_container--small {
+  width:90%;
+  height: 800px; //change later
+  display: flex;
+flex-flow: row wrap;
+  align-items: flex-start;
+  
+  
+
+}
+
+.comment_header {
+  align-self: flex-start;
+ width: 100%;
+}
+
+
+form {
+  
+  width: 80%;
+
+}
+.form_style {
+  padding-right: 170px;
+  width: 90%;
+  display: flex;
+  flex-flow: column wrap;
+ align-items: flex-end;
+}
+label {
+  width:85%;
+padding-bottom: 8px;
+  display: block;
+}
+
+
+
+input[type='text'] , textarea{
+  border: 2px solid #323232;
+  border-radius: 4px;
+  height: 48px;
+ width:85%;
+ padding-left: 16px;
+ margin-bottom: 24px;
+}
+
+
+
+textarea {
+resize: none;
+height: 116px;
+padding-top: 14px;
+}
+
+.singer_icon {
+  padding-left: 80px;
+padding-top:25px;
+padding-right: 20px;
+
+
+}
 

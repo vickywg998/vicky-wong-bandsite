@@ -168,7 +168,25 @@ td:first-child {
  
 }
 
+.comment_font {
+  @include h1-font;
+  font-weight: bold;
+}
 
+
+label {
+  @include h5-font;
+}
+
+::placeholder {
+  @include h5-font;
+  color: black;
+}
+
+#comment_button {
+  @include h4-font;
+  color: white;
+}
 /*tablet size bandsite 2*/
 .show_herotitle--small {
   @include h2-font;
@@ -177,3 +195,4 @@ td:first-child {
 .show_herotitle--big {
   @include h1-herofont2;
 }
+
