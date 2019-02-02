@@ -51,15 +51,20 @@ img {
     padding-bottom: 56px;
 }
 .comment_section_container--small {
-  width:85%;
-  height: 800px; //change later
+  width:100%;
+  padding-left: 250px;
+  padding-right: 450px;
+
   display: flex;
-flex-flow: column wrap;
-  align-items: center;
+flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
   
   
 
 }
+
+
 
 .comment_header {
   align-self: flex-start;
@@ -69,18 +74,18 @@ flex-flow: column wrap;
 
 form {
   
-  width: 80%;
+  width: 100%;
 
 }
 .form_style {
-padding-left: 40px;
-  width: 85%;
+
+  width: 100%;
   display: flex;
-  flex-flow: column wrap;
- align-items: flex-end;
+  flex-direction: column;
+
 }
 label {
-  width:85%;
+  width:100%;
 padding-bottom: 8px;
   display: block;
 }
@@ -91,7 +96,7 @@ input[type='text'] , textarea{
   border: 2px solid #323232;
   border-radius: 4px;
   height: 48px;
- width:85%;
+ width:100%;
  padding-left: 16px;
  margin-bottom: 24px;
 }
@@ -105,10 +110,11 @@ padding-top: 14px;
 }
 
 .singer_icon {
-width:10%;
+
 padding-top:25px;
 padding-right: 20px;
-align-self: flex-start;
+padding-left: 45px;
+
 
 }
 
@@ -122,12 +128,25 @@ align-self: flex-start;
 }
 
 .static_comment {
-  width: 63%;
-
-  border-bottom: 3px solid grey;
+  width: 100%;
+  display: flex; 
+  padding-top: 24px;
+  border-top: 2px solid rgb(175, 184, 193);
 }
 
+.static_comment:nth-child(1) {
+  margin-top: 24px;
+}
 .comment_content {
-  padding-top: 24px;
+
   padding-bottom: 24px;
 }
+
+.comment_name {
+  padding-top: 24px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+  margin: 0;
+  display: inline-block;
+}
+

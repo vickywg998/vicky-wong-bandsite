@@ -50,7 +50,7 @@ footer {
 
 .about_container3 {
   width: 100%;
-  height: 545px;
+  height: auto;
 }
 
 .nav-buttons {
@@ -265,11 +265,23 @@ justify-content:center;
   margin-top: 40px;
 }
 
-}
+
 
 .table_position {
   margin-top: 50px;
 }
+
+
+.comment_container--big, .comment_section_container--small {
+  padding-left: 24px;
+}
+.comment_section_container--small {
+  padding-right:110px;
+}
+
+
+}
+
 /*phone media queries*/
 
 @mixin phone_h1--size {
@@ -326,9 +338,7 @@ justify-content:center;
     padding-right: 16px;
    
   }
- section {
-   padding-left: 16px;
- }
+
 
   ul {
     width: auto;
@@ -426,7 +436,7 @@ justify-content:center;
   }
 
   .galleryimgs-container {
-    padding-left: 0px;
+    padding-left: 16px;
     padding-right: 0px;
 
     .gallery_img {
@@ -533,7 +543,36 @@ justify-content:center;
   }
   
   }
+
+  .comment_section_container--small {
+    padding-left: $phone_padding--left;
+    padding-right: $phone_padding--left;
+  }
+
+  .comment_font {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+/*show page mobile queries*/
+
+.comment_container--big {
+  padding-left: 16px;
+padding-right: 16px;
+  
+}
+.singer_icon {
+  padding-left: 0px;
 }
 
+.comment_font {
+  @include phone_h1--size;
+  
+}
+
+
+
+
+
+}
 
 

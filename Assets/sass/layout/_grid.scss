@@ -7,6 +7,8 @@ $full-width: 100%;
 
 body {
   margin: 0;
+
+
   overflow-y: scroll;
   display: grid;
   grid-template-columns: $desktop-padding 60px auto 60px $desktop-padding;
