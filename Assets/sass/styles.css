@@ -345,7 +345,6 @@ h1 {
 .show_wrapper {
   padding-right: 180px;
   width: 100%;
-  height: 670px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,9 +938,6 @@ th, td {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-item-align: stretch;
-        align-self: stretch;
-    height: 480px;
     width: 100%;
   }
   .set_padding, .about_caption {
@@ -1019,9 +1015,6 @@ th, td {
     padding-left: 24px;
   }
   /* table media queries for shows page */
-  .hero_image_show {
-    margin-top: 180px;
-  }
   .show_herotitle--small {
     padding-left: 24px;
     padding-top: 96px;
@@ -1164,14 +1157,6 @@ th, td {
     line-height: 22px;
   }
   .bg_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    height: 263px;
     width: 100%;
   }
   .bg_container .hero_image {

@@ -118,8 +118,6 @@ a {
   .bg_container {
  
     display: flex;
-    align-self: stretch;
-    height: 480px;
     width: 100%;
   
   
@@ -218,11 +216,7 @@ justify-content:center;
 /* table media queries for shows page */
 
   
-.hero_image_show {
- 
-  margin-top: 180px;
 
-  }
   
 
 
@@ -408,9 +402,7 @@ justify-content:center;
   }
 
   .bg_container {
-    display: flex;
-    flex-flow: column wrap;
-    height: 263px;
+
     width: 100%;
 
     .hero_image {
