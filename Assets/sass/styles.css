@@ -565,8 +565,27 @@ img {
 
 .comment_section_container--small {
   width: 100%;
-  padding-left: 250px;
-  padding-right: 450px;
+  padding-left: 200px;
+  padding-right: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.comment_section_container--small2 {
+  width: 100%;
+  padding-left: 200px;
+  padding-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -700,11 +719,14 @@ textarea {
 .about_container2 {
   width: 100%;
   height: 450px;
+  padding-left: 120px;
 }
 
 .about_container3 {
-  width: 85%;
+  width: 100%;
   height: 545px;
+  padding-left: 120px;
+  padding-right: 100px;
 }
 
 .about_title {
@@ -907,10 +929,13 @@ th, td {
   .about_container2 {
     height: 362px;
     width: 100%;
+    padding-left: 0px;
   }
   .about_container3 {
     width: 100%;
     height: auto;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .nav-buttons a {
     padding: 15px 15px 15px 15px;
@@ -1096,6 +1121,22 @@ th, td {
   .comment_section_container--small {
     padding-right: 110px;
   }
+  .comment_section_container--small2 {
+    padding-right: 110px;
+  }
+  /*
+.comment_section_container--small {
+  width:100%;
+  padding-left: 250px;
+  padding-right: 450px;
+
+  display: flex;
+flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+*/
   iframe {
     padding-left: 24px;
   }

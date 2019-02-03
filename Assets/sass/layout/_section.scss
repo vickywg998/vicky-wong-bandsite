@@ -52,8 +52,8 @@ img {
 }
 .comment_section_container--small {
   width:100%;
-  padding-left: 250px;
-  padding-right: 450px;
+  padding-left: 200px;
+  padding-right:350px;
 
   display: flex;
 flex-flow: row wrap;
@@ -63,7 +63,19 @@ flex-flow: row wrap;
   
 
 }
+.comment_section_container--small2 {
+  width:100%;
+  padding-left: 200px;
+  padding-right:100px;
 
+  display: flex;
+flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  
+  
+
+}
 
 
 .comment_header {

@@ -46,11 +46,14 @@ footer {
 .about_container2 {
   height: 362px;
   width:100%;
+  padding-left: 0px;
 }
 
 .about_container3 {
   width: 100%;
   height: auto;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .nav-buttons {
@@ -283,6 +286,22 @@ justify-content:center;
 .comment_section_container--small {
   padding-right:110px;
 }
+.comment_section_container--small2 {
+  padding-right:110px;
+}
+/*
+.comment_section_container--small {
+  width:100%;
+  padding-left: 250px;
+  padding-right: 450px;
+
+  display: flex;
+flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+*/
 iframe {
   padding-left: 24px;
 
