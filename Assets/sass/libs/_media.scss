@@ -70,7 +70,7 @@ a {
 }
   header {
 
-  height: 700px;
+
   width: 100%;
   
 }
@@ -122,6 +122,15 @@ a {
   
   
   }
+
+
+.bg_container_show {
+  height: 472px;
+  .hero_image_show {
+    height:670px;
+  }
+} 
+
   .set_padding, .about_caption {
     padding-left: $tablet_padding--left;
   }
@@ -215,7 +224,6 @@ justify-content:center;
 
 /* table media queries for shows page */
 
-  
 
   
 
@@ -227,7 +235,8 @@ justify-content:center;
 
 .show_herotitle--big {
   padding-left: $tablet_padding--left;
-  width: 80%;
+  width: 90%;
+  padding-bottom: 24px;
 }
 .header_show {
   height: 750px;
@@ -235,7 +244,9 @@ justify-content:center;
   flex-flow: column wrap;
   justify-content: flex-start;
  
-
+.show_wrapper {
+  padding-right:0px;
+}
   .header_container_show {
     height: 80px;
   }
@@ -271,6 +282,10 @@ justify-content:center;
 }
 .comment_section_container--small {
   padding-right:110px;
+}
+iframe {
+  padding-left: 24px;
+
 }
 
 
@@ -561,6 +576,108 @@ padding-right: 16px;
   
 }
 
+.hero_image_show {
+  height: 472px;
+} 
+
+
+.bg_container_show {
+  height: 472px;
+} 
+
+
+.show_herotitle--small {
+  @include phone_h3--size;
+  padding-top: 64px;
+  padding-left: 18px;
+  width: 100%;
+  padding-bottom: 18px;
+}
+.show_herotitle--big {
+  font-size: 30px;
+  line-height: 40px;
+  padding-left: 18px;
+  padding-right: 0px;
+  width:90%;
+  padding-bottom: 64px;
+
+}
+.show_wrapper {
+  height: 472px;
+  padding-right: 18px;
+}
+.header_show {
+  height: 550px;
+}
+
+iframe {
+  padding-left: 18px;
+  width: 300px;
+  height: 100px;
+  margin-bottom: 40px;
+}
+.show_title_container {
+  width: 100%;
+  padding-left: $phone_padding--left;
+}
+
+.main_container {
+  margin-top:170px;
+}
+
+table{
+  width:100%;
+
+  td{
+    display:block;
+    width:100%;
+    border-bottom: none;
+
+
+  }
+
+
+}
+#card {
+  width: 100%;
+}
+#card table thead {
+  display: none;
+}
+
+#card table tr{
+  display:block;
+  margin-bottom:30px;
+}
+#card table td:last-child {
+  border-bottom: 0;
+}
+
+#card table td  {
+  padding: 20px;
+}
+
+#card table td:last-child {
+  
+  border-bottom: 1px solid grey;
+ }
+
+#card table td::before {
+content: attr(data-label);
+float: left;
+padding-bottom: 16px;
+width: 100%;
+@include h5-font;
+font-weight: normal;
+}
+
+
+.table_container, .table_position {
+  width: 100%;
+}
+.button_size{
+  width: 100%;
+}
 
 
 

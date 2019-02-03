@@ -203,13 +203,15 @@ label {
 
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   overflow-y: scroll;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 180px 60px auto 60px 180px;
       grid-template-columns: 180px 60px auto 60px 180px;
-  -ms-grid-rows: (minmax(180px, 1fr))[auto-fill];
-      grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+  -ms-grid-rows: auto auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto auto;
       grid-template-areas: "header header header header header"  ". main main main . "  "section section section section section"  "footer footer footer footer footer";
 }
 
@@ -317,13 +319,6 @@ footer {
 
 .bg_container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
 }
 
 /* show header and title*/
@@ -334,7 +329,12 @@ h1 {
 
 .show_herotitle--big, .show_herotitle--small {
   padding-left: 180px;
-  width: 95%;
+  width: 60%;
+  padding-right: 64px;
+}
+
+.show_herotitle--big {
+  padding-bottom: 190px;
 }
 
 .show_herotitle--small {
@@ -345,6 +345,7 @@ h1 {
 .show_wrapper {
   padding-right: 180px;
   width: 100%;
+  height: 670px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,6 +353,53 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+}
+
+/*bandsite 2*/
+.main_container {
+  width: 100%;
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.show_title_container {
+  width: 10%;
+}
+
+.table_container {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header_show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.bg_container_show {
+  width: 100%;
 }
 
 .footer_nav {
@@ -617,6 +665,10 @@ textarea {
   display: inline-block;
 }
 
+#card {
+  width: 90%;
+}
+
 .about_caption {
   padding: 48px 180px;
 }
@@ -681,36 +733,6 @@ textarea {
   width: 45%;
 }
 
-/*bandsite 2*/
-.main_container {
-  width: 100%;
-  margin-top: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.show_title_container {
-  width: 10%;
-}
-
-.table_container {
-  width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
 .main_table {
   width: 100%;
 }
@@ -773,7 +795,10 @@ th, td {
 
 /* image size show page */
 .hero_image_show {
+  background-position: center;
+  background-size: cover;
   width: 100%;
+  height: 670px;
   background: url("../Images/marblebg.jpg");
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../Images/marblebg.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../Images/marblebg.jpg");
@@ -897,7 +922,6 @@ th, td {
     width: 100%;
   }
   header {
-    height: 700px;
     width: 100%;
   }
   .bg_caption {
@@ -939,6 +963,12 @@ th, td {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+  }
+  .bg_container_show {
+    height: 472px;
+  }
+  .bg_container_show .hero_image_show {
+    height: 670px;
   }
   .set_padding, .about_caption {
     padding-left: 24px;
@@ -1021,7 +1051,8 @@ th, td {
   }
   .show_herotitle--big {
     padding-left: 24px;
-    width: 80%;
+    width: 90%;
+    padding-bottom: 24px;
   }
   .header_show {
     height: 750px;
@@ -1035,6 +1066,9 @@ th, td {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .header_show .show_wrapper {
+    padding-right: 0px;
   }
   .header_show .header_container_show {
     height: 80px;
@@ -1061,6 +1095,9 @@ th, td {
   }
   .comment_section_container--small {
     padding-right: 110px;
+  }
+  iframe {
+    padding-left: 24px;
   }
 }
 
@@ -1303,6 +1340,91 @@ th, td {
   .comment_font {
     font-size: 24px;
     line-height: 32px;
+  }
+  .hero_image_show {
+    height: 472px;
+  }
+  .bg_container_show {
+    height: 472px;
+  }
+  .show_herotitle--small {
+    font-size: 13px;
+    line-height: 18px;
+    padding-top: 64px;
+    padding-left: 18px;
+    width: 100%;
+    padding-bottom: 18px;
+  }
+  .show_herotitle--big {
+    font-size: 30px;
+    line-height: 40px;
+    padding-left: 18px;
+    padding-right: 0px;
+    width: 90%;
+    padding-bottom: 64px;
+  }
+  .show_wrapper {
+    height: 472px;
+    padding-right: 18px;
+  }
+  .header_show {
+    height: 550px;
+  }
+  iframe {
+    padding-left: 18px;
+    width: 300px;
+    height: 100px;
+    margin-bottom: 40px;
+  }
+  .show_title_container {
+    width: 100%;
+    padding-left: 16px;
+  }
+  .main_container {
+    margin-top: 170px;
+  }
+  table {
+    width: 100%;
+  }
+  table td {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+  }
+  #card {
+    width: 100%;
+  }
+  #card table thead {
+    display: none;
+  }
+  #card table tr {
+    display: block;
+    margin-bottom: 30px;
+  }
+  #card table td:last-child {
+    border-bottom: 0;
+  }
+  #card table td {
+    padding: 20px;
+  }
+  #card table td:last-child {
+    border-bottom: 1px solid grey;
+  }
+  #card table td::before {
+    content: attr(data-label);
+    float: left;
+    padding-bottom: 16px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999999;
+    font-weight: normal;
+  }
+  .table_container, .table_position {
+    width: 100%;
+  }
+  .button_size {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

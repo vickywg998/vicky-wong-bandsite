@@ -64,8 +64,6 @@ $full-width: 100%;
 .bg_container {
   width: $full-width;
 
-  display: flex;
-  flex-flow: row wrap;
 
 }
 
@@ -78,7 +76,15 @@ h1 {
 }
 .show_herotitle--big, .show_herotitle--small {
   padding-left: $desktop-padding;
-  width: 95%;
+  width: 60%;
+  padding-right: 64px;
+}
+
+
+
+.show_herotitle--big  {
+ padding-bottom: 190px;
+
 }
 
 .show_herotitle--small {
@@ -91,9 +97,42 @@ h1 {
 
   padding-right: 180px;
   width:100%;
- 
+ height: 670px;
   display: flex;
   flex-flow: row wrap;
 
 }
 
+/*bandsite 2*/
+
+
+
+.main_container {
+  width: 100%;
+  margin-top: 48px;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  
+ 
+}
+
+.show_title_container {
+  width:10%;
+}
+
+.table_container {
+  width:90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header_show {
+  display: flex;
+  flex-flow: column;
+justify-content: flex-end;
+}
+
+.bg_container_show {
+  width: 100%;
+}

@@ -1,6 +1,8 @@
 $desktop-padding: 180px;
 $full-width: 100%;
-
+#card {
+  width: 90%;
+}
 .about_caption {
   padding: 48px $desktop-padding;
 }
@@ -51,29 +53,3 @@ $full-width: 100%;
 }
 
 
-/*bandsite 2*/
-
-.show_title {
- 
- 
-}
-
-.main_container {
-  width: 100%;
-  margin-top: 48px;
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  
- 
-}
-
-.show_title_container {
-  width:10%;
-}
-
-.table_container {
-  width:90%;
-  display: flex;
-  justify-content: flex-end;
-}
