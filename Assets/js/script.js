@@ -24,7 +24,7 @@ function createComment(name, comment) {
   const element = document.createElement('div');
   // styled the comments. The class is static_comment
   element.className = "static_comment";
-  // It should have an icon, and a content div
+  // created div and img class for icons, added static icon.
   const icon = document.createElement('div');
   icon.className = "singer_icon";
   const icon_pic = document.createElement('img');
@@ -36,39 +36,33 @@ icon_pic.src ="Assets/Images/doge.jpg";
 
   // Each comment content div also has two things within it
   // a comment_name of type h4 and a para of type p
-  // there's also a date, which is not handled right now
-  // TODO: Handle the date
   const comment_name = document.createElement('h4');
   comment_name.className = "comment_name";
   comment_name.innerHTML = name;
-  //added icon! 
 
-  // Let's just create a static date and handle it later.
+
+  //created a static date.
   const date = document.createElement('span');
   date.className = "comment_date";
   date.innerHTML = "02/02/2019";
-  // Now we add the paragraph
+  // added the paragraph
   const paragraph = document.createElement('p');
   paragraph.className = "para";
   paragraph.innerHTML = comment;
 
-  // Add the paragraph and the comment name to the content div
+  // Added the paragraph and the comment name to the content div
   content.appendChild(comment_name);
   content.appendChild(date);
   content.appendChild(paragraph);
 
-  // OK! At this point the comment is complete (except the date)
+  // the comment is complete (except the date)
 
-  // Lets add everything to the parent div
+  // add everything to the parent div
   element.appendChild(icon);
   element.appendChild(content);
 //push icon to div 
-
-
-
 icon.appendChild(icon_pic);
 // add icon to real time comment
-
   return element;
   return icon;
 }
@@ -79,7 +73,7 @@ function appendComments(name, comment) {
   newComments.appendChild(createComment(name, comment));
 }
 
-// Here I separated the event handler from the function that
+// separated the event handler from the function that
 // makes the actual comments (appendComments)
 function commentEventHandler(event) {
   event.preventDefault();

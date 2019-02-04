@@ -42,7 +42,6 @@ footer {
   width: 100%;
 }
 
-
 .about_container2 {
   height: 362px;
   width:100%;
@@ -75,11 +74,8 @@ a {
 
 
   width: 100%;
-  
+
 }
-
-
-
 
   .bg_caption {
     padding-top: 120px;
@@ -98,8 +94,6 @@ a {
 
   }
 
-
-  
   img {
     width: 224px;
     height: 126px;
@@ -115,15 +109,11 @@ a {
       width: 224px;
       height: 126px;
     }
-   
-   
   }
   .bg_container {
  
     display: flex;
     width: 100%;
-  
-  
   }
 
 
@@ -154,7 +144,6 @@ padding-left: $tablet_padding--left;
     margin: 0;
   padding-right: 0px;
 
-   
    }
    div.gallery_img:nth-child(3n+0) {
    padding-right: 0px;
@@ -163,13 +152,12 @@ padding-left: $tablet_padding--left;
      padding-left: $tablet_padding--left;
      font-size: 18px;
    }
-
    
    .footer_container {
 
     .footer_font {
     margin: 0;
-    padding-left: $tablet_padding--left;
+    padding-left: 0px;
    padding-right: 75px;
     
     padding-top: 48px;
@@ -210,6 +198,7 @@ justify-content:center;
 
  
 }
+
 .footer_human {
   height: 232px;
   width: 420px;
@@ -219,7 +208,7 @@ justify-content:center;
 
 .footer_copyright--font {
 
-  padding-left: $tablet_padding--left;
+  padding-left: 0px;
 
 }
 
@@ -262,6 +251,10 @@ justify-content:center;
   width: 100%;
   
 }
+
+.table_container {
+  width: 100%;
+}
 .show_title {
   padding-left:$tablet_padding--left;
   
@@ -289,19 +282,11 @@ justify-content:center;
 .comment_section_container--small2 {
   padding-right:110px;
 }
-/*
-.comment_section_container--small {
-  width:100%;
-  padding-left: 250px;
-  padding-right: 450px;
 
-  display: flex;
-flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: center;
+#card {
+  width: 100%;
 
 }
-*/
 iframe {
   padding-left: 24px;
 
@@ -419,6 +404,7 @@ iframe {
     .about_container3 {
       width: 100%;
       padding-left: $phone_padding--left;
+      padding-right: 18px;
       height: auto;
     }
   
@@ -571,8 +557,8 @@ iframe {
   }
 
   .comment_section_container--small {
-    padding-left: $phone_padding--left;
-    padding-right: $phone_padding--left;
+    padding-left:0px;
+    padding-right:0px;
   }
 
   .comment_font {
@@ -584,7 +570,7 @@ iframe {
 .comment_container--big {
   padding-left: 16px;
 padding-right: 16px;
-  
+ 
 }
 .singer_icon {
   padding-left: 0px;
@@ -676,10 +662,11 @@ table{
   padding: 20px;
 }
 
-#card table td:last-child {
+#card table td:nth-child(1) {
   
-  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
  }
+ 
 
 #card table td::before {
 content: attr(data-label);
@@ -690,14 +677,19 @@ width: 100%;
 font-weight: normal;
 }
 
-
+form {
+  width: 100%;
+}
 .table_container, .table_position {
   width: 100%;
 }
 .button_size{
   width: 100%;
 }
-
+#comment_button {
+  margin-left: 0px;
+  width: 100%;
+}
 
 
 

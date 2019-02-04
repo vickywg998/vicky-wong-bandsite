@@ -52,8 +52,8 @@ img {
 }
 .comment_section_container--small {
   width:100%;
-  padding-left: 200px;
-  padding-right:350px;
+  padding-left: 250px;
+  padding-right:450px;
 
   display: flex;
 flex-flow: row wrap;
@@ -146,7 +146,10 @@ padding-left: 45px;
   border-top: 2px solid rgb(175, 184, 193);
 }
 
-.static_comment:nth-child(1) {
+.static_comment:first-child {
+  display: none;
+}
+.static_comment:nth-child(2) {
   margin-top: 24px;
 }
 .comment_content {
