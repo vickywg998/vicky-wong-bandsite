@@ -1441,8 +1441,8 @@ th, td {
     display: block;
     margin-bottom: 30px;
   }
-  #card table td:last-child {
-    border-bottom: 0;
+  #card table td:first-child {
+    border-top: 2px solid lightgrey;
   }
   #card table td {
     padding: 20px;
@@ -1457,21 +1457,22 @@ th, td {
     color: #999999;
     font-weight: normal;
   }
-  #card table td::before:last-child {
-    padding-bottom: 0px;
-  }
-  form {
-    width: 100%;
-  }
-  .table_container, .table_position {
-    width: 100%;
-  }
-  .button_size {
-    width: 100%;
-  }
-  #comment_button {
-    margin-left: 0px;
-    width: 100%;
-  }
+}
+
+form {
+  width: 100%;
+}
+
+.table_container, .table_position {
+  width: 100%;
+}
+
+.button_size {
+  width: 100%;
+}
+
+#comment_button {
+  margin-left: 0px;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

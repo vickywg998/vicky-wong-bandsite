@@ -654,8 +654,8 @@ table{
   display:block;
   margin-bottom:30px;
 }
-#card table td:last-child {
-  border-bottom: 0;
+#card table td:first-child {
+  border-top: 2px solid lightgrey;
 }
 
 #card table td  {
@@ -691,6 +691,6 @@ form {
 
 
 
-}
+
 
 
