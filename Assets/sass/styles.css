@@ -1447,9 +1447,6 @@ th, td {
   #card table td {
     padding: 20px;
   }
-  #card table td:nth-child(1) {
-    border-top: 1px solid grey;
-  }
   #card table td::before {
     content: attr(data-label);
     float: left;
@@ -1459,6 +1456,9 @@ th, td {
     line-height: 20px;
     color: #999999;
     font-weight: normal;
+  }
+  #card table td::before:last-child {
+    padding-bottom: 0px;
   }
   form {
     width: 100%;

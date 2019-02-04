@@ -662,11 +662,7 @@ table{
   padding: 20px;
 }
 
-#card table td:nth-child(1) {
-  
-  border-top: 1px solid grey;
- }
- 
+
 
 #card table td::before {
 content: attr(data-label);
@@ -677,6 +673,8 @@ width: 100%;
 font-weight: normal;
 }
 
+  }
+  
 form {
   width: 100%;
 }
