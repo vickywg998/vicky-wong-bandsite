@@ -1,20 +1,29 @@
-const myAPIKey = '62d66fd2-00ae-4ece-aae4-e49bd1f8eccd';
-const commentURL = 'https://project-1-api.herokuapp.com/comments?api_key=${myAPIKey}';
-const showURL = 'https://project-1-api.herokuapp.com/showdates?api_key=${myAPIKey}'
+const myAPIKey = '0fa7fdcd-3f05-4482-9f9a-66865a6cb624';
+const commentURL = 'https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624';
+const showURL = 'https://project-1-api.herokuapp.com/showdates?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624'
+
+
+
 
 //get request using axios 
 window.onload = function () {
   axios.get(commentURL)
     .then(function (response) {
       const users = response.data;
-      console.log(users);
       console.log(response)
 
       const ul = document.querySelector('#comments');
       users.map(user => {
+        const date = new Date(user.timestamp)
+       const year = date.getFullYear()
+       const month = date.getMonth() + 1
+       const day = date.getDate()
+       const formatDate = `${month}/${day}/${year}`
+  console.log(formatDate)
+
         const newComments = document.createElement('div');
         newComments.className = "static_comment"
-        newComments.innerHTML = '<div class="singer_icon">' + '<img class="icons">' + '</img>' + '</div>' + '<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + user.timestamp + '</span>' + '<p class="para">' + user.comment + '</p>' + '</div>'
+        newComments.innerHTML = '<div class="singer_icon">' + '<img class="icons">' + '</img>' + '</div>' + '<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + formatDate + '</span>' + '<p class="para">' + user.comment + '</p>' + '</div>'
         return newComments;
 
       }).forEach(newComments => {
@@ -37,14 +46,20 @@ clickMe.addEventListener("click", function (event) {
   element.innerHTML = '';
 
  
-  axios.post('https://project-1-api.herokuapp.com/comments?api_key=${myAPIKey}', {name,comment})
+  axios.post('https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624', 
+  {name:name,
+    comment:comment
+  })
  .then(function (response) {
-
-      element.innerHTML = newComments(name,comment);
+      
+      console.log(response)
+      location.reload()
     })
     .catch(function (error) {
       console.log('error');
     })
+document.querySelector('#name').value = ''
+document.querySelector('#comment').value = ''
 
 });
 
