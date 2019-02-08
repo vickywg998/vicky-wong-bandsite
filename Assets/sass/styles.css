@@ -668,10 +668,6 @@ textarea {
   border-top: 2px solid #afb8c1;
 }
 
-.static_comment:first-child {
-  display: none;
-}
-
 .static_comment:nth-child(2) {
   margin-top: 24px;
 }

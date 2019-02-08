@@ -3,35 +3,52 @@ const commentURL = 'https://project-1-api.herokuapp.com/comments?api_key=${myAPI
 const showURL = 'https://project-1-api.herokuapp.com/showdates?api_key=${myAPIKey}'
 
 //get request using axios 
-window.onload= function() {
-axios.get(commentURL)
-.then(function(response) {
-  const users = response.data;
-console.log(users);
-console.log(response)
+window.onload = function () {
+  axios.get(commentURL)
+    .then(function (response) {
+      const users = response.data;
+      console.log(users);
+      console.log(response)
 
-// Create a new JavaScript Date object based on the timestamp
-// multiplied by 1000 so that the argument is in milliseconds, not seconds.
+      const ul = document.querySelector('#comments');
+      users.map(user => {
+        const newComments = document.createElement('div');
+        newComments.className = "static_comment"
+        newComments.innerHTML = '<div class="singer_icon">' + '<img class="icons">' + '</img>' + '</div>' + '<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + user.timestamp + '</span>' + '<p class="para">' + user.comment + '</p>' + '</div>'
+        return newComments;
 
-
-const ul= document.querySelector('#comments');
-users.map(user => {
-const newComments = document.createElement('div');
-newComments.innerHTML = '<div class="static_comment">' + '</div>'+ '<div class="singer_icon">'+ '<img class="icons">' + '</img>'   + '</div>' +'<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + user.timestamp + '</span>' + '<p class="para">' + user.comment + '</p>'+ '</div>' 
-
-
-return newComments;
-}).forEach (newComments => {
-  ul.appendChild(newComments)
-})
- 
+      }).forEach(newComments => {
+        ul.appendChild(newComments)
+      })
+    }
+    )
 }
-)}
-
-
-
 
 //post request axios 
+
+const clickMe = document.getElementById("comment_button");
+clickMe.addEventListener("click", function (event) {
+  event.preventDefault();
+ 
+  const name = document.querySelector('#name').value;
+  const comment = document.querySelector('#comment').value;
+  const element = document.createElement('div');
+  element.className = "static_comment";
+  element.innerHTML = '';
+
+ 
+  axios.post('https://project-1-api.herokuapp.com/comments?api_key=${myAPIKey}', {name,comment})
+ .then(function (response) {
+
+      element.innerHTML = newComments(name,comment);
+    })
+    .catch(function (error) {
+      console.log('error');
+    })
+
+});
+
+
 
 
 // window.onload= function() {
@@ -39,7 +56,7 @@ return newComments;
 //   .then(function(response) {
 //     const users = response.data;
 //   console.log(users);
-  
+
 //   const ul= document.querySelector('#comments');
 //   users.map(user => {
 //   const newUserComments = document.createElement('div');
@@ -50,7 +67,7 @@ return newComments;
 //   newUserComments.innerHTML = response.data[0].name;
 //     ul.appendChild(newUserComments);
 //   })
-  
+
 //   })
 //   }
 // const user = {
@@ -113,11 +130,7 @@ return newComments;
 
 // // Excuse my thought process here! LOL
 // //activate button by selecting ID
-// var clickMe = document.getElementById("comment_button");
-// // Created a comment event handler to handle the click in the form submission
-// clickMe.addEventListener("click", commentEventHandler);
 
-// function createComment(name, comment) {
 //   const element = document.createElement('div');
 //   // styled the comments. The class is static_comment
 //   element.className = "static_comment";
@@ -166,7 +179,7 @@ return newComments;
 
 // function appendComments(name, comment) {
 //   const newComments = document.querySelector('#comments');
-  
+
 //   newComments.appendChild(createComment(name, comment));
 // }
 
@@ -176,13 +189,13 @@ return newComments;
 //   event.preventDefault();
 //   const name = document.querySelector('#name').value;
 //   const comment = document.querySelector('#comment').value;
-  
+
 //   appendComments(name, comment);
 // }
 
 // for (var commentName in userComments) {
 // 	commentObj = userComments[commentName];
 // 	console.log(commentObj);
-	
+
 // 	appendComments(commentObj.name, commentObj.comment);
 // 
