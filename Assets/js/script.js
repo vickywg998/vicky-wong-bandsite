@@ -3,8 +3,6 @@ const commentURL = 'https://project-1-api.herokuapp.com/comments?api_key=0fa7fdc
 const showURL = 'https://project-1-api.herokuapp.com/showdates?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624'
 
 
-
-
 //get request using axios 
 window.onload = function () {
   axios.get(commentURL)
@@ -31,6 +29,10 @@ window.onload = function () {
       })
     }
     )
+
+
+
+
 }
 
 //post request axios 
@@ -62,7 +64,6 @@ document.querySelector('#name').value = ''
 document.querySelector('#comment').value = ''
 
 });
-
 
 
 

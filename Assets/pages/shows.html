@@ -58,42 +58,42 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="table">
             <tr>
-              <td data-label="DATES">Mon Dec 17 2018</td>
-              <td data-label="VENUE">Ronald Lane</td>
-              <td data-label="LOCATION">San Francisco, CA</td>
-              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position"></td>
+              <td data-label="DATES" id='dates'>Mon Dec 17 2018</td>
+              <td data-label="VENUE" id='venue'>Ronald Lane</td>
+              <td data-label="LOCATION" id='location'>San Francisco, CA</td>
+              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position" id='show_button'></td>
             </tr>
             <tr>
-              <td data-label="DATES">Tue Jul 18 2019</td>
-              <td data-label="VENUE">Pier 3 East</td>
-              <td data-label="LOCATION">San Francisco, CA</td>
-              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position"></td>
+              <td data-label="DATES" id='dates'>Tue Jul 18 2019</td>
+              <td data-label="VENUE" id='venue'>Pier 3 East</td>
+              <td data-label="LOCATION" id='location'>San Francisco, CA</td>
+              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position" id='show_button'></td>
             </tr>
             <tr>
-              <td data-label="DATES">Fri Jul 22 2019</td>
-              <td data-label="VENUE">View Loungue</td>
-              <td data-label="LOCATION">San Francisco, CA</td>
-              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position"></td>
+              <td data-label="DATES" id='dates'>Fri Jul 22 2019</td>
+              <td data-label="VENUE" id='venue'>View Loungue</td>
+              <td data-label="LOCATION" id='location'>San Francisco, CA</td>
+              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position" id='show_button'></td>
             </tr>
             <tr>
-              <td data-label="DATES">Sat Aug 12 2019</td>
-              <td data-label="VENUE">Hyatt Agency</td>
-              <td data-label="LOCATION">San Francisco, CA</td>
-              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position"></td>
+              <td data-label="DATES" id='dates'>Sat Aug 12 2019</td>
+              <td data-label="VENUE" id='venue'>Hyatt Agency</td>
+              <td data-label="LOCATION" id='location'>San Francisco, CA</td>
+              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position" id='show_button'></td>
             </tr>
             <tr>
               <td data-label="DATES">Fri Sep 05 2019</td>
-              <td data-label="VENUE">Moscow Center</td>
-              <td data-label="LOCATION">San Francisco, CA</td>
-              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position"></td>
+              <td data-label="VENUE" id='venue'>Moscow Center</td>
+              <td data-label="LOCATION" id='location'>San Francisco, CA</td>
+              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position" id='show_button'></td>
             </tr>
             <tr>
               <td data-label="DATES">Wed Aug 11 2019</td>
-              <td data-label="VENUE">Pres Club</td>
-              <td data-label="LOCATION">San Francisco, CA</td>
-              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position"></td>
+              <td data-label="VENUE" id='venue'>Pres Club</td>
+              <td data-label="LOCATION" id='location'>San Francisco, CA</td>
+              <td><input type="submit" value="BUY TICKETS" class="button button_size button_position" id='show_button'></td>
             </tr>
           </tbody>
         </table>
@@ -142,6 +142,8 @@
     </div>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+  <script src="../js/shows-script.js"></script>
 </body>
 
 </html>
