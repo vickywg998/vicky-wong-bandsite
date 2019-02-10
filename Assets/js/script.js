@@ -8,6 +8,7 @@ window.onload = function () {
     .then(function (response) {
       const users = response.data;
       console.log(response)
+     
 
       const ul = document.querySelector('#comments');
       users.map(user => {
@@ -20,70 +21,55 @@ window.onload = function () {
 
         const newComments = document.createElement('div');
         newComments.className = "static_comment"
-        newComments.innerHTML = '<div class="comment_icon">' + '<img class="icons">' + '</img>' + '</div>' + '<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + formatDate + '</span>' + '<p class="para">' + user.comment + '</p>' +'<input type="button" id="delete_button" value="Delete">' + '</button>' + '</div>'
+        newComments.innerHTML = '<div class="comment_icon">' + '<img class="icons">' + '</img>' + '</div>' + '<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + formatDate + '</span>' + '<p class="para">' + user.comment + '</p>' + '<input type="button" id="delete_button" value="Delete">' + '</button>' + '</div>'
         return newComments;
       }).forEach(newComments => {
         ul.appendChild(newComments)
       })
-    }
-    )
-}
-//post request axios 
-
-const clickMe = document.getElementById("comment_button");
-clickMe.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  const name = document.querySelector('#name').value;
-  const comment = document.querySelector('#comment').value;
-  const element = document.createElement('div');
-  element.className = "static_comment";
-  element.innerHTML = '';
-
-  axios.post('https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624',
-    {
-      name: name,
-      comment: comment
+      /* delete request */
+      // const deleteComment = document.getElementById("delete_button");
+      // deleteComment.addEventListener("click", (event) => {
+      //   event.preventDefault();
+      //   const deleteDiv = document.querySelector('.static_comment');
+       
+      //   axios.delete('https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624/' + id)
+      //     .then(function (response) {
+      //       deleteDiv.splice(index,1)
+      //       console.log(response)
+      //     })
+      // });
     })
-    .then(function (response) {
-
-      console.log(response)
-      location.reload()
-    })
-    .catch(function (error) {
-      console.log('error');
-    })
-  document.querySelector('#name').value = ''
-  document.querySelector('#comment').value = ''
-
-});
-
-/* delete request */
-const deleteComment = document.getElementById("delete_button");
-deleteComment.addEventListener("click", function (event) {
-  event.preventDefault();
-const deleteDiv = document.querySelectorAll('.static_comment').value;
-  deleteDiv.innerHTML = '';
- 
- 
- 
-
-  axios.delete('https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624',
-  {
-    data: { name: name,
-    comment: comment
-    }
-  })
-  .then(function (response) {
-
-    console.log(response)
-    location.reload()
-  })
-  .catch(function (error) {
-    console.log('error');
-  })
-document.querySelector('#name').value = ''
-document.querySelector('#comment').value = ''
+    
 
 
-});
+  //post request axios 
+
+  const clickMe = document.getElementById("comment_button");
+  clickMe.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const name = document.querySelector('#name').value;
+    const comment = document.querySelector('#comment').value;
+    const element = document.createElement('div');
+    element.className = "static_comment";
+    element.innerHTML = '';
+
+    axios.post('https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624',
+      {
+        name: name,
+        comment: comment
+      })
+      .then(function (response) {
+
+        console.log(response)
+        location.reload()
+      })
+      .catch(function (error) {
+        console.log('error');
+      })
+    document.querySelector('#name').value = ''
+    document.querySelector('#comment').value = ''
+
+  });
+
+};
