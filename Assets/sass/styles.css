@@ -634,7 +634,7 @@ textarea {
   padding-top: 14px;
 }
 
-.singer_icon {
+.singer_icon, .comment_icon {
   padding-top: 25px;
   padding-right: 20px;
   padding-left: 45px;
@@ -673,6 +673,15 @@ textarea {
   padding-right: 10px;
   margin: 0;
   display: inline-block;
+}
+
+/*comment button*/
+#comment_button {
+  background-color: #323232;
+  height: 48px;
+  width: 160px;
+  margin-left: 400px;
+  border-radius: 8%;
 }
 
 #card {
@@ -754,7 +763,7 @@ textarea {
   margin-bottom: 40px;
   border-collapse: collapse;
   border: none;
-  width: 76.6%;
+  width: 100%;
 }
 
 table td {
@@ -846,6 +855,13 @@ th, td {
   width: 48px;
 }
 
+.comment_icon img {
+  border-radius: 50%;
+  background-color: lightgrey;
+  height: 48px;
+  width: 48px;
+}
+
 .icon_form_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -891,13 +907,11 @@ th, td {
   background-color: grey;
 }
 
-/*comment button*/
-#comment_button {
-  background-color: #323232;
-  height: 48px;
-  width: 160px;
-  margin-left: 400px;
-  border-radius: 8%;
+#delete_button {
+  background-color: #AFAFAF;
+  border-radius: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 /*media queries*/
@@ -1373,6 +1387,14 @@ th, td {
     border-bottom: 5px solid white;
     display: inline-block;
   }
+  .nav-item:first-child {
+    padding-left: 0px;
+    padding-right: 100px;
+  }
+  .nav-item:last-child {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .comment_section_container--small {
     padding-left: 0px;
     padding-right: 0px;
@@ -1386,7 +1408,7 @@ th, td {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .singer_icon {
+  .singer_icon, .comment_icon {
     padding-left: 0px;
   }
   .comment_font {
@@ -1453,9 +1475,6 @@ th, td {
     display: block;
     margin-bottom: 30px;
   }
-  #card table td:first-child {
-    border-top: 2px solid lightgrey;
-  }
   #card table td {
     padding: 20px;
   }
@@ -1469,22 +1488,18 @@ th, td {
     color: #999999;
     font-weight: normal;
   }
-}
-
-form {
-  width: 100%;
-}
-
-.table_container, .table_position {
-  width: 100%;
-}
-
-.button_size {
-  width: 100%;
-}
-
-#comment_button {
-  margin-left: 0px;
-  width: 100%;
+  form {
+    width: 100%;
+  }
+  .table_container, .table_position {
+    width: 100%;
+  }
+  .button_size {
+    width: 100%;
+  }
+  #comment_button {
+    margin-left: 0px;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

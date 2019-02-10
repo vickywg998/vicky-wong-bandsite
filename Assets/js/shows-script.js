@@ -10,7 +10,7 @@ window.onload = function () {
       shows.map(show => {
 
         const trr = document.createElement('tr');
-        trr.innerHTML =   '<td data-label="DATES" id="dates">' + show.date + '</td>' + '<td data-label="VENUE" id="venue">' + show.place + '</td>' + '<td data-label="LOCATION" id="location">' + show.location + '</td>' + '<input type="submit" value="BUY TICKETS" class="button button_size button_position" id="show_button">' + '</td>'
+        trr.innerHTML =   '<td data-label="DATES" id="dates">' + show.date + '</td>' + '<td data-label="VENUE" id="venue">' + show.place + '</td>' + '<td data-label="LOCATION" id="location">' + show.location + '</td>'  +'<td>'+'<input type="submit" value="BUY TICKETS" class="button button_size button_position" id="show_button">' + '</td>'
         return trr;
 
       }).forEach(trr => {

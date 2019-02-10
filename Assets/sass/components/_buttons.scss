@@ -26,12 +26,8 @@
   background-color: grey;
 }
 
-/*comment button*/
-#comment_button {
-  background-color: #323232;
-
-@include comment_button--size;
-margin-left: 400px;
-border-radius: 8%;
-
+#delete_button {
+  background-color: #AFAFAF;
+  border-radius: 5px;
+  align-self: flex-end;
 }

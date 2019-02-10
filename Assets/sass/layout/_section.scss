@@ -95,7 +95,7 @@ height: 116px;
 padding-top: 14px;
 }
 
-.singer_icon {
+.singer_icon, .comment_icon {
 padding-top:25px;
 padding-right: 20px;
 padding-left: 45px;
@@ -130,3 +130,12 @@ padding-left: 45px;
   display: inline-block;
 }
 
+/*comment button*/
+#comment_button {
+  background-color: #323232;
+height: 48px;
+width: 160px;
+margin-left: 400px;
+border-radius: 8%;
+
+}

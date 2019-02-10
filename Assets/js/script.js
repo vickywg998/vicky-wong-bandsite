@@ -20,7 +20,7 @@ window.onload = function () {
 
         const newComments = document.createElement('div');
         newComments.className = "static_comment"
-        newComments.innerHTML = '<div class="singer_icon">' + '<img class="icons">' + '</img>' + '</div>' + '<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + formatDate + '</span>' + '<p class="para">' + user.comment + '</p>' + '</div>'
+        newComments.innerHTML = '<div class="comment_icon">' + '<img class="icons">' + '</img>' + '</div>' + '<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + formatDate + '</span>' + '<p class="para">' + user.comment + '</p>' +'<input type="button" id="delete_button" value="Delete">' + '</button>' + '</div>'
         return newComments;
       }).forEach(newComments => {
         ul.appendChild(newComments)
@@ -55,5 +55,35 @@ clickMe.addEventListener("click", function (event) {
     })
   document.querySelector('#name').value = ''
   document.querySelector('#comment').value = ''
+
+});
+
+/* delete request */
+const deleteComment = document.getElementById("delete_button");
+deleteComment.addEventListener("click", function (event) {
+  event.preventDefault();
+const deleteDiv = document.querySelectorAll('.static_comment').value;
+  deleteDiv.innerHTML = '';
+ 
+ 
+ 
+
+  axios.delete('https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624',
+  {
+    data: { name: name,
+    comment: comment
+    }
+  })
+  .then(function (response) {
+
+    console.log(response)
+    location.reload()
+  })
+  .catch(function (error) {
+    console.log('error');
+  })
+document.querySelector('#name').value = ''
+document.querySelector('#comment').value = ''
+
 
 });

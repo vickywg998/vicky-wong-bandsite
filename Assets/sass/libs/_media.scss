@@ -547,15 +547,22 @@ iframe {
 		margin-top: 0px;
     text-align: center;
     
-	  }
-
+    }
 	  a:hover {
 		border-bottom: 5px solid white;
     display: inline-block;
   }
-  
   }
+.nav-item:first-child {
+padding-left: 0px;
+padding-right: 100px;
+}
 
+.nav-item:last-child {
+  padding-left: 0px;
+  padding-right:0px;
+  }
+  
   .comment_section_container--small {
     padding-left:0px;
     padding-right:0px;
@@ -572,7 +579,7 @@ iframe {
 padding-right: 16px;
  
 }
-.singer_icon {
+.singer_icon, .comment_icon {
   padding-left: 0px;
 }
 
@@ -654,9 +661,7 @@ table{
   display:block;
   margin-bottom:30px;
 }
-#card table td:first-child {
-  border-top: 2px solid lightgrey;
-}
+
 
 #card table td  {
   padding: 20px;
@@ -673,7 +678,7 @@ width: 100%;
 font-weight: normal;
 }
 
-  }
+  
   
 form {
   width: 100%;
@@ -689,8 +694,7 @@ form {
   width: 100%;
 }
 
-
-
+}
 
 
 
