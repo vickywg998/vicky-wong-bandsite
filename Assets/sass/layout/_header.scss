@@ -7,8 +7,6 @@
   text-align: left;
   padding-left: 180px;
   overflow: hidden;
-
-  
 }
 
 .header_logo {
@@ -63,10 +61,7 @@ $full-width: 100%;
 
 .bg_container {
   width: $full-width;
-
-
 }
-
 
 /* show header and title*/
 
@@ -84,7 +79,6 @@ h1 {
 
 .show_herotitle--big  {
  padding-bottom: 190px;
-
 }
 
 .show_herotitle--small {
@@ -93,8 +87,6 @@ h1 {
 }
 
 .show_wrapper {
-  
-
   padding-right: 180px;
   width:100%;
  height: 670px;
@@ -105,16 +97,12 @@ h1 {
 
 /*bandsite 2*/
 
-
-
 .main_container {
   width: 100%;
   margin-top: 48px;
   display:flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  
- 
 }
 
 .show_title_container {

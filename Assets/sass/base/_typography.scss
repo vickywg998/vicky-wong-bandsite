@@ -1,67 +1,26 @@
+@import "./mixins";
+
 @font-face {
   font-family: 'Avenir Next';
   src: url('/Assets/fonts/regular.otf') format('otf');
   }
 
-
-@mixin h1-herofont {
-  font-size:60px;
-  line-height: 68px;
-}
-@mixin h1-herofont2 {
-  font-size:60px;
-  line-height: 80px;
-}
-@mixin h1-font {
-font-size: 36px;
-line-height: 44px;
-}
-
-@mixin h2-font {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-@mixin h3-font {
-  font-size: 16px;
-  line-height: 24px;
-}
-@mixin h4-font {
-  font-size: 14px;
-  line-height: 22px;
-}
-@mixin h5-font {
-  font-size: 12px;
-  line-height: 20px;
-  color: #999999;
-  
-}
-
 $primary-font: 'Avenir Next';
 $secondary_font-color: white;
-
-
+$bold_font: bold;
 
 body {
   font-family: $primary-font, sans-serif;
 }
 
 .header_logo {
-
   @include h2-font;
   font-weight: normal;
-
- 
 }
-
-
 
 .nav-buttons a {
   @include h4-font;
-  
 }
-
-
 
 .bg_caption {
  @include h1-herofont;
@@ -72,27 +31,24 @@ body {
   font-size: 24px;
 }
 
-
 .about_caption {
  @include h1-font;
-
  }
 
 .about_title {
-  font-weight: bold;
+  font-weight: $bold_font;
   @include h2-font;
 }
 .about_quote {
-
   @include h2-font;
-  font-weight: bold;
+  font-weight: $bold_font;
 display: inline-block;
 
 }
 
 .about_name {
   @include h3-font;
-font-weight: bold;
+font-weight: $bold_font;
 }
 
 .about_contentcard {
@@ -101,15 +57,12 @@ font-weight: bold;
 
 .gallery_font {
 
-  font-weight: bold;
+  font-weight: $bold_font;
   @include h1-font;
-  
 }
 .footer_logo {
-
   @include h2-font;
   font-weight: normal;
-
 }
 
 .footer_human {
@@ -117,22 +70,17 @@ font-weight: bold;
  @include h3-font;
 
 .name_bold {
-  font-weight: bold;
+  font-weight: $bold_font;
 }
 }
 .footer_copyright--font {
   color: $secondary_font-color;
   padding-left: 180px;
-
 }
 
 .footer_container .footer_font {
-  
-  color: white;
-  
+  color:$secondary_font-color;
 }   
-
-
 
 /*bandsite 2 */
 
@@ -155,24 +103,21 @@ td:first-child {
 
 .show_herotitle--small {
   @include h1-font;
-  color: white;
+  color:$secondary_font-color;
 }
 .show_herotitle--big {
   @include h1-herofont2;
-  color: white;
+  color:$secondary_font-color;
 }
-
 
 .show_title {
  @include h1-font;
- 
 }
 
 .comment_font {
   @include h1-font;
   font-weight: bold;
 }
-
 
 label {
   @include h5-font;
@@ -185,7 +130,7 @@ label {
 
 #comment_button {
   @include h4-font;
-  color: white;
+  color:$secondary_font-color;
 }
 
 .static_comment {
@@ -195,6 +140,7 @@ label {
 .comment_date {
   @include h5-font;
 }
+
 /*tablet size bandsite 2*/
 .show_herotitle--small {
   @include h2-font;

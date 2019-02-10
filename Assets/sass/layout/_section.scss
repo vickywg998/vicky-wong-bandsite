@@ -24,16 +24,7 @@
   flex-flow: row wrap;
 }
 
-img {
-  width: 344px;
-  height: 193px;
-}
 
-.gallery_img {
-  display: flex;
-  padding-right: 24px;
-  padding-bottom: 24px;
-}
 
 /*comment section */
 
@@ -43,7 +34,6 @@ img {
   display: flex;
   flex-flow: column wrap;
   align-items: center; 
-  
 }
 
 .comment_font {
@@ -54,43 +44,31 @@ img {
   width:100%;
   padding-left: 250px;
   padding-right:450px;
-
   display: flex;
-flex-flow: row wrap;
+  flex-flow: row wrap;
   align-items: flex-start;
   justify-content: center;
-  
-  
-
 }
 .comment_section_container--small2 {
   width:100%;
   padding-left: 200px;
   padding-right:100px;
-
   display: flex;
 flex-flow: row wrap;
   align-items: flex-start;
   justify-content: center;
-  
-  
-
 }
-
 
 .comment_header {
   align-self: flex-start;
  width: 100%;
 }
 
-
 form {
-  
   width: 100%;
-
 }
-.form_style {
 
+.form_style {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -102,8 +80,6 @@ padding-bottom: 8px;
   display: block;
 }
 
-
-
 input[type='text'] , textarea{
   border: 2px solid #323232;
   border-radius: 4px;
@@ -113,8 +89,6 @@ input[type='text'] , textarea{
  margin-bottom: 24px;
 }
 
-
-
 textarea {
 resize: none;
 height: 116px;
@@ -122,21 +96,15 @@ padding-top: 14px;
 }
 
 .singer_icon {
-
 padding-top:25px;
 padding-right: 20px;
 padding-left: 45px;
 
-
 }
 
 .static_comments {
-  
- 
   display:flex;
   flex-flow: column wrap;
- 
-
 }
 
 .static_comment {
@@ -151,7 +119,6 @@ padding-left: 45px;
   margin-top: 24px;
 }
 .comment_content {
-
   padding-bottom: 24px;
 }
 

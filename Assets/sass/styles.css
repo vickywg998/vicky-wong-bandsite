@@ -1,4 +1,6 @@
 /*base imports*/
+/*fonts*/
+/*button*/
 @font-face {
   font-family: 'Avenir Next';
   src: url("/Assets/fonts/regular.otf") format("otf");
@@ -195,6 +197,8 @@ label {
   line-height: 80px;
 }
 
+/*fonts*/
+/*button*/
 /*layout*/
 * {
   -webkit-box-sizing: border-box;
@@ -529,19 +533,6 @@ h1 {
           flex-flow: row wrap;
 }
 
-img {
-  width: 344px;
-  height: 193px;
-}
-
-.gallery_img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-right: 24px;
-  padding-bottom: 24px;
-}
-
 /*comment section */
 .comment_container--big {
   width: 100%;
@@ -815,6 +806,29 @@ th, td {
   background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../Images/marblebg.jpg");
 }
 
+/* gallery image */
+.gallery_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 24px;
+  padding-bottom: 24px;
+}
+
+.gallery_img img {
+  width: 344px;
+  height: 193px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.gallery_img img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
 /* image size show page */
 .hero_image_show {
   background-position: center;
@@ -846,6 +860,8 @@ th, td {
           justify-content: center;
 }
 
+/*fonts*/
+/*button*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -865,8 +881,8 @@ th, td {
 }
 
 .button_size {
-  width: 160px;
   height: 48px;
+  width: 160px;
   border: 0;
   margin: 0;
 }

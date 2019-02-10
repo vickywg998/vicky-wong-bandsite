@@ -1,6 +1,6 @@
 /*base imports*/
 @import "base/typography";
-
+@import "base/mixins";
 /*layout*/
 @import "layout/grid";
 @import "layout/header";
@@ -16,4 +16,6 @@
 /*media queries*/
 
 @import "libs/media";
+
+
 
