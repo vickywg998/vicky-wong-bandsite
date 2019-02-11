@@ -7,30 +7,27 @@ window.onload = function () {
   axios.get(commentURL)
     .then(function (response) {
       const users = response.data;
-      console.log(response)
+      console.log(response);
      
 
       const ul = document.querySelector('#comments');
       users.map(user => {
         const date = new Date(user.timestamp)
-        const year = date.getFullYear()
-        const month = date.getMonth() + 1
-        const day = date.getDate()
-        const formatDate = `${month}/${day}/${year}`
-        console.log(formatDate)
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const formatDate = `${month}/${day}/${year}`;
+        console.log(formatDate);
 
         const newComments = document.createElement('div');
-        newComments.className = "static_comment"
+        newComments.className = "static_comment";
         newComments.innerHTML = '<div class="comment_icon">' + '<img class="icons">' + '</img>' + '</div>' + '<div class="comment_content">' + '<h4 class="comment_name">' + user.name + '</h4>' + '<span class="comment_date">' + formatDate + '</span>' + '<p class="para">' + user.comment + '</p>' + '<input type="button" id="delete_button" value="Delete">' + '</button>' + '</div>'
         return newComments;
       }).forEach(newComments => {
-        ul.appendChild(newComments)
+        ul.appendChild(newComments);
       })
-  
     })
     
-
-
   //post request axios 
 
   const clickMe = document.getElementById("comment_button");
@@ -56,16 +53,10 @@ window.onload = function () {
       .catch(function (error) {
         console.log('error');
       })
-    document.querySelector('#name').value = ''
-    document.querySelector('#comment').value = ''
-
+    document.querySelector('#name').value = '';
+    document.querySelector('#comment').value = '';
   });
-
 };
-
-
-
-
 
     /* PLEASE IGNORE: FAILED DELETE BUTTON. WILL TRY AGAIN 
     
