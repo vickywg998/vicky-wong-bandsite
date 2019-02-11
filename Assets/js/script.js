@@ -26,18 +26,7 @@ window.onload = function () {
       }).forEach(newComments => {
         ul.appendChild(newComments)
       })
-      /* delete request */
-      // const deleteComment = document.getElementById("delete_button");
-      // deleteComment.addEventListener("click", (event) => {
-      //   event.preventDefault();
-      //   const deleteDiv = document.querySelector('.static_comment');
-       
-      //   axios.delete('https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624/' + id)
-      //     .then(function (response) {
-      //       deleteDiv.splice(index,1)
-      //       console.log(response)
-      //     })
-      // });
+  
     })
     
 
@@ -73,3 +62,22 @@ window.onload = function () {
   });
 
 };
+
+
+
+
+
+    /* PLEASE IGNORE: FAILED DELETE BUTTON. WILL TRY AGAIN 
+    
+    delete request */
+      // const deleteComment = document.getElementById("delete_button");
+      // deleteComment.addEventListener("click", (event) => {
+      //   event.preventDefault();
+      //   const deleteDiv = document.querySelector('.static_comment');
+       
+      //   axios.delete('https://project-1-api.herokuapp.com/comments?api_key=0fa7fdcd-3f05-4482-9f9a-66865a6cb624/' + id)
+      //     .then(function (response) {
+      //       deleteDiv.splice(index,1)
+      //       console.log(response)
+      //     })
+      // });
