@@ -1,0 +1,41 @@
+/*fonts*/ 
+
+@mixin h1-herofont {
+  font-size:60px;
+  line-height: 68px;
+}
+@mixin h1-herofont2 {
+  font-size:60px;
+  line-height: 80px;
+}
+@mixin h1-font {
+font-size: 36px;
+line-height: 44px;
+}
+
+@mixin h2-font {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin h3-font {
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin h4-font {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin h5-font {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
+/*button*/
+
+@mixin comment_button--size {
+  height: 48px;
+  width: 160px;
+}
+

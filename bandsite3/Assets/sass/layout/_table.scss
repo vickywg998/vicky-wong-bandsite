@@ -1,0 +1,27 @@
+
+.main_table {
+  width: 100%;
+}
+
+.table_position {
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+}
+
+table td {
+  border-bottom: 1px solid #AFAFAF;
+}
+
+td:last-child {
+  padding-right: 0px;
+}
+
+
+th, td {
+  text-align: left;
+  padding: 20px;
+
+}
+

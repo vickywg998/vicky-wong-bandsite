@@ -1,0 +1,153 @@
+@import "./mixins";
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/Assets/fonts/regular.otf') format('otf');
+  }
+
+$primary-font: 'Avenir Next';
+$secondary_font-color: white;
+$bold_font: bold;
+
+body {
+  font-family: $primary-font, sans-serif;
+}
+
+.header_logo {
+  @include h2-font;
+  font-weight: normal;
+}
+
+.nav-buttons a {
+  @include h4-font;
+}
+
+.bg_caption {
+ @include h1-herofont;
+  color: $secondary_font-color;
+}
+
+.about_container {
+  font-size: 24px;
+}
+
+.about_caption {
+ @include h1-font;
+ }
+
+.about_title {
+  font-weight: $bold_font;
+  @include h2-font;
+}
+.about_quote {
+  @include h2-font;
+  font-weight: $bold_font;
+display: inline-block;
+
+}
+
+.about_name {
+  @include h3-font;
+font-weight: $bold_font;
+}
+
+.about_contentcard {
+  @include h4-font;
+}
+
+.gallery_font {
+
+  font-weight: $bold_font;
+  @include h1-font;
+}
+.footer_logo {
+  @include h2-font;
+  font-weight: normal;
+}
+
+.footer_human {
+
+ @include h3-font;
+
+.name_bold {
+  font-weight: $bold_font;
+}
+}
+.footer_copyright--font {
+  color: $secondary_font-color;
+  padding-left: 180px;
+}
+
+.footer_container .footer_font {
+  color:$secondary_font-color;
+}   
+
+/*bandsite 2 */
+
+th {
+  @include h5-font;
+  font-weight: normal;
+}
+
+td {
+  @include h4-font;
+}
+
+.button {
+  @include h3-font;
+
+}
+td:first-child {
+  font-weight: bold;
+}
+
+.show_herotitle--small {
+  @include h1-font;
+  color:$secondary_font-color;
+}
+.show_herotitle--big {
+  @include h1-herofont2;
+  color:$secondary_font-color;
+}
+
+.show_title {
+ @include h1-font;
+}
+
+.comment_font {
+  @include h1-font;
+  font-weight: bold;
+}
+
+label {
+  @include h5-font;
+}
+
+::placeholder {
+  @include h5-font;
+  color: black;
+}
+
+#comment_button {
+  @include h4-font;
+  color:$secondary_font-color;
+}
+
+.static_comment {
+  @include h4-font;
+}
+
+.comment_date {
+  @include h5-font;
+}
+
+/*tablet size bandsite 2*/
+.show_herotitle--small {
+  @include h2-font;
+}
+
+.show_herotitle--big {
+  @include h1-herofont2;
+}
+
+

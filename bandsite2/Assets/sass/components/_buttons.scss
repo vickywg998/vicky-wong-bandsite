@@ -1,0 +1,33 @@
+@import "../base/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 2px 4px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+  background-color: #323232;
+}
+
+.button_position {
+  float: right;
+}
+.button_size {
+ @include comment_button--size;
+  border: 0;
+  margin:0;
+}
+
+.button:hover {
+  background-color: grey;
+}
+
+#delete_button {
+  background-color: #AFAFAF;
+  border-radius: 5px;
+  align-self: flex-end;
+}
