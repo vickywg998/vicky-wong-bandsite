@@ -1,0 +1,453 @@
+/*base imports*/
+@import 'base/typography';
+
+/*layout*/ 
+@import 'layout/header';
+@import 'layout/footer';
+
+/*components*/
+@import 'components/image';
+
+
+
+$desktop-padding: 180px;
+$full-width: 100%;
+
+
+* {
+  box-sizing: border-box;
+}
+
+  body {
+   
+ 
+   margin: 0;
+  overflow-y: scroll;
+
+  display: grid;
+  grid-template-columns: $desktop-padding 60px auto 60px $desktop-padding;
+  grid-template-rows: repeat(auto-fill, minmax($desktop-padding, 1fr));
+  grid-template-areas: "header header header header header"
+                       ". . main . . "
+                       "section section section section section"
+                       "footer footer footer footer footer";
+ 
+ }
+ 
+ 
+
+ h3,h2, ul, section {
+   margin: 0;
+ }
+ 
+ 
+ /*grid area*/
+ header {
+ 
+   grid-area: header;
+  
+ }
+ 
+ 
+ main {
+   grid-area: main;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ 
+ }
+ 
+ section {
+   grid-area: section;
+   padding-bottom: 40px;
+ }
+ 
+ footer {
+   grid-area: footer;
+   background-color: #323232;
+ }
+ 
+ .header_container {
+   height: 80px;
+ }
+ 
+ .bg_caption {
+   width: 60%;
+   padding-top: 200px;
+   padding-left: $desktop-padding;
+ } 
+ .bg_container {
+
+   width: $full-width ;
+
+  
+ 
+ }
+ h3 {
+   font-weight: normal;
+ }
+ 
+ .about_caption { 
+ 
+  padding: 48px $desktop-padding;
+  
+ 
+ }
+ 
+ .about_quote {
+ 
+   padding: 48px  100px 40px 0px;
+ }
+ 
+ .about_name {
+  
+   padding-bottom: 56px;
+ 
+ }
+ .about_container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-end;
+ }
+ .about_container2 {
+ width: 896px;
+ height: 450px;
+ }
+ .about_container3 {
+   width: 896px;
+   height: 545px;
+   }
+ 
+ .about_title {
+ padding-bottom: 32px;
+  width: $full-width;
+ }
+ 
+ .about_content {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+ }
+ 
+ .about_contentcard {
+   display: flex;
+   flex-wrap: wrap;
+  margin-right: 5%;
+   width: 45%;
+   
+ }
+
+ .gallery_font {
+   padding-top: 48px;
+   @include desktop-padding-left;
+   padding-bottom: 48px;
+ 
+   
+ }
+ .gallery_container {
+ 
+   background-color: #FAFAFA;
+ display: flex;
+ flex-flow: column wrap;
+ 
+ 
+ }
+ 
+ 
+ .galleryimgs-container {
+   padding-left: $desktop-padding;
+   padding-right: $desktop-padding;
+   display: flex;
+ align-items: center;
+   justify-content: space-evenly;
+   flex-flow: row wrap;
+   
+ }
+ 
+ img {
+   width: 344px;
+   height: 193px;
+ }
+ .gallery_img {
+   display: flex;
+   padding-right: 24px;
+   padding-bottom: 24px;
+    
+ }
+ 
+ .footer_copyright--font {
+  padding-left: $desktop-padding;
+  
+
+}
+ 
+ 
+
+
+
+/*phone media queries*/
+@mixin phone_h1--size {
+  font-size:24px;
+  line-height: 32px;
+}
+
+
+
+@mixin phone_h2--size {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin phone_h3--size {
+  font-size: 13px;
+  line-height: 18px;
+}
+@mixin phone_h4--size {
+  font-size: 13px;
+  line-height: 18px;
+}
+@mixin phone_h5--size {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@media only screen and (min-width : 319px) and (max-width : 767px) {
+$phone_padding--left: 16px;
+
+  /* Styles */
+html, body {
+  width: $full-width;
+  height: 100%;
+  margin: 0px;
+  padding:0px;
+  overflow-x: hidden;
+}
+  body {
+  
+  margin: 0;
+  padding:0;
+ overflow-y: scroll;
+
+ display: grid;
+ grid-template-columns: 1fr 3fr 1fr;
+ grid-template-rows: 420px auto auto auto;
+ grid-template-areas: "header header header"
+                      "main main main "
+                      "section section section"
+                      "footer footer footer";
+
+}
+
+.nav-container , header, section, footer, h1 {
+
+  margin: 0;
+  padding: 0;
+}
+
+
+main {
+  padding-left: $phone_padding--left;
+  
+
+}
+
+
+.nav-container {
+
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  .nav_buttons {
+    margin-top: 0px;
+    width: 320px;
+    
+    }
+
+
+}
+
+
+ul {
+  width: auto;
+}
+
+
+
+.header_logo {
+  padding-left: 18px;
+}
+
+
+.about_name {
+  
+  padding-bottom: 40px;
+
+}
+.about_container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-end;
+  width: $full-width;
+
+.about_content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; 
+  .about_title {
+    padding-bottom: 24px;
+  }
+ 
+  .about_contentcard {
+    width: $full-width;
+  }
+  .about_contentcard:nth-child(3) {
+     padding-bottom: 40px;
+  }
+}
+
+  .about_image {
+    width:288px;
+    height: 145px;
+    padding-left: $phone_padding--left;
+    padding-top:24px;
+    padding-bottom: 24px;
+    
+    background-position: center;
+    background-size: cover;
+  }
+
+.about_container2 {
+padding-left: $phone_padding--left;
+width: 320px;
+height:145px;
+
+}
+.about_container3 {
+width: 320px;
+padding-left: $phone_padding--left;
+  height: auto;
+  }
+}
+ 
+
+.about_caption {
+
+  padding: 24px 16px 24px 16px;
+  @include phone_h1--size;
+  
+ }
+
+ .about_quote {
+
+  padding: 24px 16px 32px 0px;
+  @include phone_h2--size;
+
+}
+
+.bg_container {
+
+  display: flex;
+flex-flow: column wrap;
+  height: 263px;
+
+  width: 320px;
+  .hero_image {
+    height: 263px;
+    width: $full-width;
+  }
+  .bg_caption {
+    width: 80%;
+    padding-top: 90px;
+    padding-left: $phone_padding--left;
+    @include phone_h1--size;
+  }
+}
+
+.gallery_font {
+  padding-left: $phone_padding--left;
+  padding-bottom: 24px;
+  padding-top: 32px;
+  @include phone_h1--size;
+}
+
+.galleryimgs-container {
+  padding-left: 0px;
+  padding-right: 0px;
+
+  .gallery_img {
+   
+    height:178px;
+    width: 304px;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  img {
+    height: 162px;
+    width: 288px;
+  }
+}
+
+
+
+.footer_nav {
+  justify-content:flex-start;
+  flex-flow: row wrap;
+  align-items: center;
+
+  
+  .footer_font {
+    margin-left: 0px;
+    padding-bottom: 16px;
+    @include phone_h1--size;
+  }
+h1.footer_font {
+    margin: 0;
+    padding-left: 16px;
+  }
+  .footer_logo {
+    display: none;
+  }
+  .footer_navicons {
+    width: 70%;
+    padding-left: 16px;
+  }
+}
+.footer_humans {
+ 
+
+  display: flex;
+  flex-flow: column wrap;
+justify-content: center;
+width: $full-width;
+margin-left: 150px;
+
+}
+
+
+
+.footer_human {
+  height: auto;
+  width: 400px;
+  margin-right: 50px;
+@include phone_h4--size;
+}
+
+
+.footer_copyright--font {
+  padding-left: 16px;
+  width: 70%;
+  @include phone_h4--size;
+}
+
+}
+
+
+
+@import 'libs/media';
+
+
